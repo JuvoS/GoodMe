@@ -1,0 +1,25 @@
+{
+	"selected": [
+	{ "username":[{"text":"姓名","data":"JuvoS"}],
+	 "userbothday":[{"text":"出生年月","data":"199X.0X.0X"}],
+	 "usertel":[{"text":"电话","data":"135XXXXXXX"}],
+	 "useremail":[{"text":"邮箱","data":"XXXXX@qq.com"}],
+	 "useraddress":[{"text":"地址","data":"四川成都"}],
+	 "usernation":[{"text":"民族","data":"汉"}]
+	},
+	{ "username":[{"text":"姓名","data":"JuvoS"}],
+	 "userbothday":[{"text":"出生年月","data":"199X.0X.0X"}],
+	 "usertel":[{"text":"电话","data":"135XXXXXXX"}],
+	 "useremail":[{"text":"邮箱","data":"XXXXX@qq.com"}],
+	 "useraddress":[{"text":"地址","data":"四川成都"}],
+	 "usernation":[{"text":"民族","data":"汉"}]
+	},
+	{ "username":[{"text":"姓名","data":"JuvoS"}],
+	 "userbothday":[{"text":"出生年月","data":"199X.0X.0X"}],
+	 "usertel":[{"text":"电话","data":"135XXXXXXX"}],
+	 "useremail":[{"text":"邮箱","data":"XXXXX@qq.com"}],
+	 "useraddress":[{"text":"地址","data":"四川成都"}],
+	 "usernation":[{"text":"民族","data":"汉"}]
+	}
+	]
+}

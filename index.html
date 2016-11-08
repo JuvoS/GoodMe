@@ -2,9 +2,97 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>Good ME</title>
+		<link rel="stylesheet" type="text/css" href="css/gme.css"/>
+		<script type="text/javascript" src="js/angular.min.js" ></script>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		
+		<div class="g-main">
+			<div class="g-title">
+				<h1>GOOD ME</h1>
+			</div>
+			<form>
+			<div class="g-content" ng-app="GMe" ng-controller="Mlist">
+				<div class="g-cell">
+					<div class="g-cell-s"><span>姓名</span><input placeholder="JuvoS" type="text" id="username"/></div>
+					<div class="g-cell-s"><span>出生年月</span><input placeholder="199X.0X.0X" type="text" id="userbothday"/></div>
+					<div class="g-cell-s"><span>电话</span><input placeholder="1512XXXXXXXX" type="tel" id="usertel"/></div>
+					<div class="g-cell-s"><span>电话</span><input placeholder="1512XXXXXXXX" type="tel" id="usertel"/></div>
+				</div>
+				<div class="g-cell">
+					<div class="g-cell-option">
+						<ul>
+							<li class="g-cell-option-item"><input type="checkbox"/><span>教育背景</span></li>
+							<li class="g-cell-option-item"><input type="checkbox"/><span>实习经历</span></li>
+							<li class="g-cell-option-item"><input type="checkbox"/><span>个人技能</span></li>
+							<li class="g-cell-option-item"><input type="checkbox"/><span>任职情况</span></li>
+							<li class="g-cell-option-item"><input type="checkbox"/><span>奖项荣誉</span></li>
+							<li class="g-cell-option-item"><input type="checkbox"/><span>自我评价</span></li>
+						</ul>
+					</div>
+					<div class="g-cell-m">			
+						<div class="g-cell-m-content">
+							<h3>实习经历</h3>
+							<div class="g-cell-m-item">
+								<p>2016.11.08</p>
+								<ul>
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+							<div class="g-cell-m-item">
+								<p>2016.11.08</p>
+								<ul>
+									<li>1</li>
+									<li>2</li>
+								</ul>
+							</div>
+							<div class="g-cell-m-item">
+								<p>2016.11.08</p>
+								<ul>
+									<li>1</li>
+								</ul>
+							</div>
+						</div>
+						<div class="g-cell-m-content">
+							<h3>实习经历</h3>
+							<div class="g-cell-m-item">
+								<p>2016.11.08</p>
+								<ul>
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+						</div>
+						<div class="g-cell-m-content">
+							<h3>实习经历</h3>
+							<div class="g-cell-m-item">
+								<p>2016.11.08</p>
+								<ul>
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</form>
+			<div class="g-footer">
+				<p>do by JuvoS</p>
+			</div>
+		</div>
+		<script type="text/javascript">
+//			var app = angular.module("GMe",[]);
+//			app.controller("Mlist",function($scope,$http){
+//				$http.get("data/data.json")
+//				.success(function(response){$scope.name = response.selected;
+//				console.log($scope)});
+//			});
+		</script>
 	</body>
 </html>

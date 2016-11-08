@@ -1,0 +1,129 @@
+html body{
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+.g-main{
+	display: block;
+	width: 960px;
+	min-height: 300px;
+	box-shadow: rgb(211,211,211) 0px 4px 20px 0px;
+	font-size: 16px;
+	line-height: 50px;
+	background: #fff;
+	margin: 30px auto 20px;
+	padding: 20px;
+}
+.g-title{
+	height: 100px;
+	text-align: center;
+	border-bottom: 1px solid #eee;
+}
+.g-title h1{
+	font-weight: bold;
+	font-size: 50px;
+	font-family: "microsoft yahei";
+	text-shadow: 5px 5px 5px rgb(211,211,211);
+	
+}
+.g-content{
+/*	border: 1px dotted #666;*/
+	margin: 20px 0px 0px 0px;
+	text-align: center;
+}
+.g-cell{
+	margin-bottom: 5px;
+	border-bottom: 1px dotted #EEEEEE;
+}
+.g-cell-s{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	width: 400px;
+	padding: 5px;
+	margin: 2px 10px;
+	border: 1px solid #ccc;
+}
+.g-cell-s span{
+	float: left;
+	width: 80px;
+}
+.g-cell-s input{
+	font-size: 18px;
+	padding-left: 10px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	line-height: 30px;
+	float: right;
+	width: 300px;
+}
+.g-cell-option{
+	width: 800px;
+	margin-left: 50px;
+}
+.g-cell-option ul{
+	list-style-type: none;
+	display: inline;
+}
+.g-cell-option ul li{
+	height: 40px;
+	float:left; 
+	width: 100px;
+}
+.g-cell-option ul li input{
+}
+.g-cell-option-item span{
+	line-height: 40px;
+	height: 40px;
+}
+.g-cell-m{
+	width: 800px;
+	border: 1px solid #CCCCCC;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 60px;
+}
+
+.g-cell-m-content{
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+}
+.g-cell-m-content h3{
+	padding: 0px;
+	margin:0px;
+	text-align: left;
+	border-bottom: 1px solid #CCCCCC;
+}
+.g-cell-m-item{
+	margin: 5px 0px 0px 0px;
+}
+.g-cell-m-content .g-cell-m-item p{
+	margin: 5px 0px 0px 10px;
+	line-height: 20px;
+	height: 20px;
+}
+.g-cell-m-content .g-cell-m-item ul{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	padding-left: 20px;
+}
+.g-cell-m-content .g-cell-m-item ul li{
+	padding-top: 2px;
+	padding-bottom: 0px;
+	height: 30px;
+	line-height: 30px;
+}
+.g-footer{
+	
+	height: 30px;
+	text-align: center;
+	border-top: 1px solid #eee;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.g-footer h5{
+	font-size: 15px;
+	font-family: "microsoft yahei";	
+}
