@@ -13,73 +13,29 @@
 				<h1>GOOD ME</h1>
 			</div>
 			<form>
-			<div class="g-content" ng-app="GMe" ng-controller="Mlist">
-				<div class="g-cell">
-					<div class="g-cell-s"><span>姓名</span><input placeholder="JuvoS" type="text" id="username"/></div>
-					<div class="g-cell-s"><span>出生年月</span><input placeholder="199X.0X.0X" type="text" id="userbothday"/></div>
-					<div class="g-cell-s"><span>电话</span><input placeholder="1512XXXXXXXX" type="tel" id="usertel"/></div>
-					<div class="g-cell-s"><span>电话</span><input placeholder="1512XXXXXXXX" type="tel" id="usertel"/></div>
-				</div>
-				<div class="g-cell">
-					<div class="g-cell-option">
-						<ul>
-							<li class="g-cell-option-item"><input type="checkbox"/><span>教育背景</span></li>
-							<li class="g-cell-option-item"><input type="checkbox"/><span>实习经历</span></li>
-							<li class="g-cell-option-item"><input type="checkbox"/><span>个人技能</span></li>
-							<li class="g-cell-option-item"><input type="checkbox"/><span>任职情况</span></li>
-							<li class="g-cell-option-item"><input type="checkbox"/><span>奖项荣誉</span></li>
-							<li class="g-cell-option-item"><input type="checkbox"/><span>自我评价</span></li>
-						</ul>
-					</div>
-					<div class="g-cell-m">			
-						<div class="g-cell-m-content">
-							<h3>实习经历</h3>
-							<div class="g-cell-m-item">
-								<p>2016.11.08</p>
-								<ul>
-									<li>1</li>
-									<li>2</li>
-									<li>3</li>
-								</ul>
-							</div>
-							<div class="g-cell-m-item">
-								<p>2016.11.08</p>
-								<ul>
-									<li>1</li>
-									<li>2</li>
-								</ul>
-							</div>
-							<div class="g-cell-m-item">
-								<p>2016.11.08</p>
-								<ul>
-									<li>1</li>
-								</ul>
-							</div>
-						</div>
-						<div class="g-cell-m-content">
-							<h3>实习经历</h3>
-							<div class="g-cell-m-item">
-								<p>2016.11.08</p>
-								<ul>
-									<li>1</li>
-									<li>2</li>
-									<li>3</li>
-								</ul>
-							</div>
-						</div>
-						<div class="g-cell-m-content">
-							<h3>实习经历</h3>
-							<div class="g-cell-m-item">
-								<p>2016.11.08</p>
-								<ul>
-									<li>1</li>
-									<li>2</li>
-									<li>3</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="g-content">
+				 <div class="g-cell">
+				 	<div>姓名：<input id="username" placeholder="JuvoS" onchange="changeInfo(this);"/></div>
+				 	<div>性别：<input id="usersex" placeholder="男" onchange="changeInfo(this);"/></div>
+				 	<div>出生年月：<input id="userbornday" placeholder="199X.0X.0X" onchange="changeInfo(this);"/></div>
+				 	<div>民族：<input id="usernation" placeholder="汉" onchange="changeInfo(this);"/></div>
+				 	<div>籍贯：<input id="userorigin" placeholder="四川成都" onchange="changeInfo(this);"/></div>
+				 	<div>毕业院校：<input id="userschool" placeholder="四川xxx大学" onchange="changeInfo(this);"/></div>
+				 	<div>政治面貌：<input id="userpolite" placeholder="团员" onchange="changeInfo(this);"/></div>
+				 	<div>学历：<input id="useredu" placeholder="本科" onchange="changeInfo(this);"/></div>
+				 	<div>联系电话：<input id="usertel" placeholder="135XXXXXXXXXXXX" onchange="changeInfo(this);"/></div>
+				 	<div>邮箱：<input id="useremail" placeholder="xxxx@163.com" onchange="changeInfo(this);"/></div>
+				 	<div>地址：<input id="useraddress" placeholder="上海xxx"onchange="changeInfo(this);"/></div>
+				 </div>
+				 <div class="g-cell">
+				 	<div>个人技能：<textarea id="perskills" placeholder="行结尾-g\m换行" onchange="changeInfo(this);"></textarea></div>
+				 	<div>工作经历：<textarea id="interexp" placeholder="行结尾-g\m换行" onchange="changeInfo(this);"></textarea></div>
+				 	<div>项目经验：<textarea id="projectexp" placeholder="行结尾-g\m换行" onchange="changeInfo(this);"></textarea></div>
+				 	<div>奖项荣誉：<textarea id="awardhonor" placeholder="行结尾-g\m换行" onchange="changeInfo(this);"></textarea></div>
+				 	<div>自我评价：<textarea id="evaluation" placeholder="行结尾-g\m换行" onchange="changeInfo(this);"></textarea></div>
+				 	<div><input id="l_title" placeholder="自我评价" />：<textarea id="l_content" placeholder="行结尾-g\m换行" onchange="changeInfo(this);"></textarea></div>
+				 </div>
+				 <input type="button" value="生成" id="generate"/>
 			</div>
 			</form>
 			<div class="g-footer">
@@ -87,12 +43,30 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-//			var app = angular.module("GMe",[]);
-//			app.controller("Mlist",function($scope,$http){
-//				$http.get("data/data.json")
-//				.success(function(response){$scope.name = response.selected;
-//				console.log($scope)});
-//			});
+			window.onload = function (){
+				var idlist=["username","usersex","userbornday","usernation","userorigin",
+				"userschool","userpolite","useredu","usertel","useremail","useraddress",
+				"perskills","interexp","projectexp","awardhonor","evaluation","l_title",
+				"l_content"];
+				
+				for (var i=0;i<idlist.length;i++) {
+					var temp=getInfo(idlist[i]);
+					var id_t="#"+idlist[i];
+					console.log(temp);
+					$(id_t).val(temp);
+				}
+				
+				$("#generate").click(function(){
+					console.log("生成数据组");
+				});
+			}
+			function changeInfo($obj){
+				console.log($obj.id+","+$obj.value);
+				localStorage.setItem($obj.id,$obj.value);
+			}
+			function getInfo($id){
+				return localStorage.getItem($id);
+			}
 		</script>
 	</body>
 </html>
