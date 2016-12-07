@@ -13,6 +13,7 @@ html body{
 	background: #fff;
 	margin: 30px auto 20px;
 	padding: 20px;
+	height:auto;min-height:500px;
 }
 .g-title{
 	height: 100px;
@@ -28,34 +29,27 @@ html body{
 }
 .g-content{
 /*	border: 1px dotted #666;*/
-	margin: 20px 0px 0px 0px;
+	padding-bottom: 10px;
+	margin: 10px 0px 0px 10px;
 	text-align: center;
+	z-index: 10;
+	align-content: center;
+	width: 100%;
+	height:auto;min-height:1500px;
 }
-.g-cell{
-	margin-bottom: 5px;
-	border-bottom: 1px dotted #EEEEEE;
+.g-content .g-cell-head,.g-cell-foot{
+	width: 850px;
 }
-.g-cell-s{
-	display: inline-block;
-	height: 40px;
-	line-height: 40px;
-	width: 400px;
-	padding: 5px;
-	margin: 2px 10px;
-	border: 1px solid #ccc;
+
+.g-cell-head{
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #EEEEEE;
 }
-.g-cell-s span{
-	float: left;
-	width: 80px;
-}
-.g-cell-s input{
-	font-size: 18px;
-	padding-left: 10px;
-	padding-top: 3px;
-	padding-bottom: 2px;
-	line-height: 30px;
-	float: right;
-	width: 300px;
+.g-cell-foot{
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 .g-cell-option{
 	width: 800px;
@@ -125,4 +119,138 @@ html body{
 .g-footer h5{
 	font-size: 15px;
 	font-family: "microsoft yahei";	
+}
+
+.g-content .g-cell-half{
+	float: left;
+	width: 550px;
+	margin: 0px;
+	text-align: center;
+	border-right: 1px dotted #CCCCCC;
+	height:400px;height:auto;min-height:500px;
+}
+.g-content .g-cell-show{
+	float: right;
+	width: 400px;
+	text-align: center;
+	border: 1px solid #CCCCCC;
+	height:400px;height:auto;min-height:500px;
+}
+.toleft{
+	float: left;
+}
+.toright{
+	float: right;
+}
+.g-cell-little{
+	height: 20px;
+	line-height: 20px;
+	float: left;
+	width: 150px;
+	text-align: left;
+	margin-left: 20px;
+	margin-bottom: 20px;fill-rule: ;
+}
+.g-cell-little label{
+	width: 30px;
+	font-size: 10px;
+	padding-bottom: 10px;
+}
+.g-cell-little input{
+	width: 80px;
+	float: right;
+	border:none;
+}
+.add-cell{
+	width: 80px !important;
+	height: 30px !important;
+	background-color: #EEEEEE;
+	text-align: center !important;
+}
+.add-cell>a{
+	height: 30px;
+	line-height: 30px;
+	font-size: 10px;
+	color: #000;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	display: block;
+	cursor: pointer;
+}
+.g-cell-middle{
+	height: 20px;
+	line-height: 20px;
+	float: right;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 20px;
+}
+.g-cell-middle label{
+	width: 50px;
+	font-size: 10px;
+	margin-left: 20px;
+}
+.g-cell-middle input{
+	width: 300px;
+	float: right;
+	margin-right: 20px;
+}
+.g-content .g-cell-btn{
+	height: 50px;
+	width: 100%;
+	background-color: rgb(241, 109, 16);
+	text-align: center;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.g-content .g-cell-btn>a{
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: "微软雅黑";
+}
+.g-cell-large{
+	/*height: 20px;
+	line-height: 20px;
+	float: right;*/
+	width: 300px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+.g-cell-large>p{
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	float: left;
+	font-size: 10px;
+	padding-left: 20px;
+}
+.g-cell-large>textarea{
+	width: 500px;
+	height: 100px;
+	float: left;
+	font-size: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+.show-content{
+	width: 100%;
+	padding: 10px;
+	margin-top: -50px;
+}
+.show-content>p{
+	width: 100%;
+	font-size: 8px;
+	text-align: left;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 0px;
+	margin-top: 5px;
 }

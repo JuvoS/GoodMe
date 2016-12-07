@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本信息</title>
+		<link rel="stylesheet" href="../../layer/css/min_123.css">
+		<style>
+			.agree-protocol{
+				margin-left: 10px!important;
+			}
+			.agree-protocol tbody tr td{
+				padding: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="confirm-info-list mgt clearfix" style="position: relative; margin:0 auto;">
+	      <dl class="confirm-info-list-dl confirm-info-list-project">
+	      	<table  class="agree-protocol">
+	      		<tbody>
+	      			<tr>
+	      				<td><span class="td-name">姓  名：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入姓名" id="username" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      				<td rowspan="12" colspan="3">
+	      					<div style="border: 1px solid #ccc;width: 315px;height: 420px;padding: 5px;" id="baseInfo"></div>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">性  别：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入性别" id="usersex" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">出生年月：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入出生年月" id="userbornday" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">民族：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入民族" id="usernation" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">籍贯：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入籍贯" id="userorigin" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">政治面貌：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入政治面貌" id="userpolite" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">学历：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入学历" id="useredu" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">毕业院校：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入毕业院校" id="userschool" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">联系电话：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入联系电话" id="usertel" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">邮箱：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入邮箱" id="useremail" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">地址：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入地址" id="useraddress" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">就业方向：</span></td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入方向,多选择请用#隔开" id="userdirect" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      				
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">图片地址：</span></td>
+	      				<td colspan="4">
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入图片地址" id="head" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      				
+	      			</tr>
+	      		</tbody>
+	      	</table>
+	      </dl>
+	    </div>
+	</body>
+<script src="../../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+var idlist=["username","usersex","userbornday","usernation","userorigin",
+			"userschool","userpolite","useredu","usertel","useremail","useraddress","userdirect",
+			"perskills","interexp","projectexp","awardhonor","evaluation","l_title",
+			"l_content"];
+window.onload = function (){
+	for (var i=0;i<idlist.length;i++) {
+		var temp=getInfo(idlist[i]);
+		var id_t="#"+idlist[i];
+		if(temp==null){
+			temp="";
+			localStorage.setItem(idlist[i],temp);
+		}
+		$(id_t).val(temp);
+	}
+}
+$(document).ready(function(){
+	refreshInfo();
+});
+function refreshInfo(){
+	var temp = "<h5>基本信息预览</h5><div class='show-content'>";
+	temp += "<p>姓名："+localStorage.getItem("username")+"</p>";
+	temp += "<p>性别："+localStorage.getItem("usersex")+"</p>";
+	temp += "<p>出生年月："+localStorage.getItem("userbornday")+"</p>";
+	temp += "<p>民族："+localStorage.getItem("usernation")+"</p>";
+	temp += "<p>籍贯："+localStorage.getItem("userorigin")+"</p>";
+	temp += "<p>政治面貌："+localStorage.getItem("userpolite")+"</p>";
+	temp += "<p>学历："+localStorage.getItem("useredu")+"</p>";
+	temp += "<p>毕业院校："+localStorage.getItem("userschool")+"</p>";
+	temp += "<p>联系电话："+localStorage.getItem("usertel")+"</p>";
+	temp += "<p>邮箱："+localStorage.getItem("useremail")+"</p>";
+	temp += "<p>地址："+localStorage.getItem("useraddress")+"</p>";
+	temp += "<p>就业方向："+dirShow()+"</p>";
+	temp += "<p style='width:100%;height:100px;text-align:center;line-height:100px;font-size:30px;'>";
+	temp += "<a href='http://www.qimuren.com/show/index.php'>头像选择</a><br>";
+	temp += "<img src='"+localStorage.getItem("head")+"' style='height:50px;'></p>";
+	temp += "</div>";
+	$("#baseInfo").html(temp);
+}
+function changeInfo(obj){
+	localStorage.setItem(obj.id,obj.value);
+	refreshInfo();
+}
+function getInfo(id){
+	return localStorage.getItem(id);
+}
+function dirShow(){
+	var t_dir = "";
+	if(localStorage.getItem("userdirect")){
+		var dir = localStorage.getItem("userdirect").split("#");
+		console.log(dir);
+		for (var j=0;j<dir.length;j++) {
+			if(j==(dir.length-1)){
+				t_dir += dir[j];
+			}else{
+				t_dir += dir[j]+"/";
+			}
+		}
+	}else{
+		var t_dir = "无方向";
+	}
+	return t_dir;
+}
+</script>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>工作经历</title>
+		<link rel="stylesheet" href="../../layer/css/min.css">
+		<link rel="stylesheet" href="../../layer/css/min_123.css">
+		<style>
+			.agree-protocol{
+				margin-left: 30px!important;
+				margin-right: 30px!important;
+				margin-top: 20px!important;
+				margin-bottom: 20px!important;
+			}
+			.agree-protocol table tbody tr td{
+				padding: 2px;
+			}
+			.agree-protocol table tbody tr:nth-child(odd){
+				/*background-color: #0099CC;*/
+				height: 100px;
+				text-align: start;
+				/*float: left;*/
+			}
+			#baseInfo table tbody tr:nth-child(odd){
+				/*background-color: #0099CC;*/
+				height: auto;
+				text-align: start;
+				/*border-bottom: 1px solid#ccc;*/
+				/*float: left;*/
+			}
+			.agree-protocol table tbody tr:nth-child(1){
+				text-align: center!important;
+				height: 30px!important;
+				
+			}
+			.agree-protocol table tbody tr td:nth-child(1){
+				width: 300px;
+			}
+			.agree-protocol table tbody tr td:nth-child(2){
+				width: 400px;
+			}
+			.agree-protocol table tbody tr td span{
+				/*padding-left: 5px;*/
+				padding-right: 5px;
+	/*			padding-left: 2px!important;*/
+			}
+			.agree-protocol table tbody tr td span input{
+				width: 90%;
+			}
+			.agree-protocol table tbody tr td:nth-child(2) span input{
+				width: 100%!important;
+			}
+			.tocenter{
+				text-align: center!important;
+			}
+			.expcontent{
+				/*width: 90%!important;*/
+				/*border: 1px dashed #ccc;*/
+				padding: 5px!important;
+				vertical-align:top;
+			}
+			.expcontent>textarea{
+				width: 100%;
+				height: 100%;
+				text-align: left;
+				padding-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="confirm-info-list mgt clearfix" style="position: relative; margin:0 auto;">
+	      <dl class="confirm-info-list-dl confirm-info-list-project">
+	      	<div class="agree-protocol">
+	      	<table>
+	      		<tbody>
+	      			<tr>
+	      				<td>时间</td>
+	      				<td>公司名称</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">例：2016.05-2016.11</span></td>
+	      				<td><span class="plain-text">xxx公司</span></td>
+	      			</tr>
+	      			<tr style="height: 30px!important;">
+	      				<td colspan="2"><span>负责项目整体开发与运维<br>负责运营</span></td>
+	      			</tr>
+	      			<tr>
+	      				<td>
+	      					<span class="plain-text">
+	      						<input  type="text" placeholder="请输入名称" id="inter_t_one" onchange="changeInfo(this);">
+	      					</span>
+	      				</td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入内容" id="inter_c_one" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td colspan="2" class="expcontent">
+      						<textarea  type="text" placeholder="请输入内容" id="inter_p_one" onchange="changeInfo(this);"></textarea>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td>
+	      					<span class="plain-text">
+	      						<input  type="text" placeholder="请输入名称" id="inter_t_two" onchange="changeInfo(this);">
+	      					</span>
+	      				</td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入内容" id="inter_c_two" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td colspan="2" class="expcontent">
+      						<textarea  type="text" placeholder="请输入内容" id="inter_p_two" onchange="changeInfo(this);"></textarea>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td>
+	      					<span class="plain-text">
+	      						<input  type="text" placeholder="请输入名称" id="inter_t_three" onchange="changeInfo(this);">
+	      					</span>
+	      				</td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入内容" id="inter_c_three" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td colspan="2" class="expcontent">
+      						<textarea  type="text" placeholder="请输入内容" id="inter_p_three" onchange="changeInfo(this);"></textarea>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td>
+	      					<span class="plain-text">
+	      						<input  type="text" placeholder="请输入名称" id="inter_t_four" onchange="changeInfo(this);">
+	      					</span>
+	      				</td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入内容" id="inter_c_four" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td colspan="2" class="expcontent">
+      						<textarea  type="text" placeholder="请输入内容" id="inter_p_four" onchange="changeInfo(this);"></textarea>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td>
+	      					<span class="plain-text">
+	      						<input  type="text" placeholder="请输入名称" id="inter_t_five" onchange="changeInfo(this);">
+	      					</span>
+	      				</td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入内容" id="inter_c_five" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td colspan="2" class="expcontent">
+      						<textarea  type="text" placeholder="请输入内容" id="inter_p_five" onchange="changeInfo(this);"></textarea>
+	      				</td>
+	      			</tr>
+	      		</tbody>
+	      	</table>
+	      	</div>
+	      </dl>
+	      <dl class="confirm-info-list-dl confirm-info-list-project">
+	      	<div class="agree-protocol">
+	      		<div id="baseInfo"></div>
+	      	</div>
+	      </dl>
+	    </div>
+	</body>
+<script src="../../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+var idlist=["inter_t_one","inter_c_one","inter_p_one","inter_t_two","inter_c_two","inter_p_two",
+"inter_t_three","inter_c_three","inter_p_three","inter_t_four","inter_c_four","inter_p_four",
+"inter_t_five","inter_c_five","inter_p_five"];
+window.onload = function (){
+	for (var i=0;i<idlist.length;i++) {
+		var temp=getInfo(idlist[i]);
+		var id_t="#"+idlist[i];
+		if(temp==null){
+			temp="";
+			localStorage.setItem(idlist[i],temp);
+		}
+		$(id_t).val(temp);
+	}
+}
+$(document).ready(function(){
+	refreshInfo();
+});
+function refreshInfo(){
+	var temp = "<table><tbody><tr><td>时间</td><td>公司名称</td></tr><tr>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("inter_t_one")+"</span></td>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("inter_c_one")+"</span></td>";
+	temp += "</tr>";
+	temp += pToTemp("inter_p_one");
+	temp += "<tr>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("inter_t_two")+"</span></td>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("inter_c_two")+"</span></td>";
+	temp += "</tr>";
+	temp += pToTemp("inter_p_two");
+	temp += "<tr>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("inter_t_three")+"</span></td>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("inter_c_three")+"</span></td>";
+	temp += "</tr>";
+	temp += pToTemp("inter_p_three");
+	temp += "<tr>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("inter_t_four")+"</span></td>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("inter_c_four")+"</span></td>";
+	temp += "</tr>";
+	temp += pToTemp("inter_p_four");
+	temp += "<tr>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("inter_t_five")+"</span></td>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("inter_c_five")+"</span></td>";
+	temp += "</tr>";
+	temp += pToTemp("inter_p_five");
+	temp += "</tbody></table>";
+	$("#baseInfo").html(temp);
+}
+function pToTemp(id){
+	var temp="";
+	if(localStorage.getItem(id)){
+		var tcc = localStorage.getItem(id).split("\n");
+		temp += "<tr><td colspan='2'><ul style='list-style: disc;margin-left:30px;'>";
+		for (var i=0;i<tcc.length;i++) {
+			temp += "<li>"+tcc[i]+"</li>"
+		}
+		temp += "</ul></td></tr>";
+	}
+	return temp;
+}
+function changeInfo(obj){
+	localStorage.setItem(obj.id,obj.value);
+	refreshInfo();
+}
+function getInfo(id){
+	return localStorage.getItem(id);
+}
+
+</script>
+</html>

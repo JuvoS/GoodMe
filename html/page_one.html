@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/gme.css"/>
+<style type="text/css">
+html,body{
+	border: 0px;
+}
+.page-main{
+	display: block;
+	width: 960px;
+	/*box-shadow: rgb(211,211,211) 0px 4px 20px 0px;*/
+	font-size: 16px;
+	line-height: 50px;
+	background: #fff;
+	margin: 30px auto 20px;
+	padding: 20px 20px 20px 40px;
+	height:auto;min-height:500px;
+	border: 0;
+}
+.page-left{
+	display: block;
+	float: left;
+	width: 300px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 30px;
+	/*border: 1px dotted #484848;*/
+	background-color: #EEEEEE;
+	height:auto;min-height:500px;
+}
+.page-right{
+	display: block;
+	float: right;
+	width: 600px;
+	padding-left: 10px;
+	padding-right: 10px;
+	/*border: 1px dotted #EF4737;*/
+	height:auto;min-height:500px;
+}
+.l-head-img{
+	width: 100%;
+	margin-top: 50px;
+	text-align:center;
+	margin-left:auto; 
+	margin-right:auto;
+	padding: auto;
+}
+.l-head-img>img{
+	width: 150px;
+	height: 150px;
+	background-color:#ccc; 
+	-moz-border-radius: 80px; 
+	-webkit-border-radius: 80px; 
+	border: 3px solid #AAAAAA;
+}
+.l-name{
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+}
+.l-name>p{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	vertical-align: top;
+	font-size: 20px;
+}
+#username{
+	font-size: 25px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+}
+.l-base{
+	width: 100%;
+}
+.l-base p{
+	font-size: 20px;
+	font-weight: bold;
+	height: 20px;
+	line-height: 20px;
+	margin: 1px 0 1px 5px;
+}
+.l-base table{
+	margin-bottom: 5px;
+	margin-left: 10px;
+	padding-right: 5px;
+	width: 100%;
+}
+.l-base table tbody{
+	width: 100%;
+}
+.l-base table tbody tr{
+	height: 20px;
+	line-height: 20px;
+	width: 100%;
+}
+.l-base table tbody tr td:nth-child(1){
+	width: 30%;
+}
+.l-base table tbody tr td{
+	font-size: 15px;
+}
+.projectexp{
+	width: 100%;
+	margin-left: 20px;
+}
+h3{
+	font-size: 25px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	color: #222;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #555;
+	margin-right: 30px;
+}
+.projectexp table{
+	width: 100%;
+	margin-left: 10px;
+}
+.projectexp table tbody{
+	width: 100%;
+}
+.projectexp table tbody tr{
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+}
+.projectexp table tbody tr td>ul{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+.projectexp table tbody tr:nth-child(odd){
+	/*width: 25%;*/
+	font-size: 22px;
+	/*text-align: center;*/
+}
+.projectexp table tbody tr:nth-child(even){
+	/*width: 25%;*/
+	font-size: 18px;
+	/*text-align: center;*/
+}
+.evaluation{
+	width: 100%;
+	margin-left: 20px;
+}
+.evaluation>ul{
+	width: 100%;
+	margin-left: 10px;
+}
+.evaluation ul>li{
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	font-size: 18px;
+}
+.awardhonor{
+	width: 100%;
+	margin-left: 20px;
+}
+.awardhonor table{
+	width: 100%;
+	margin-left: 10px;
+}
+.awardhonor table tbody{
+	width: 100%;
+}
+.awardhonor table tbody tr{
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	font-size: 22px;
+}
+.awardhonor table tbody tr td>ul{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 20px;
+	line-height: 20px;
+	width: 100%;
+	font-size: 18px;
+}
+</style>
+<link rel="stylesheet" href="../css/back.css" />
+	</head>
+	<body>
+		<div class="back">
+			<a onclick="history.go(-1);">返回</a>
+			<a onclick="visibeAction();">隐藏</a>
+		</div>
+		<div class="page-main">
+			<div class="page-left">
+				<div class="l-head-img">
+					<img src="../img/head.jpg" id="head" onclick="changeHead(this);"/>
+				</div>
+				<div class="l-name">
+					<p><span id="username">JuvoS</span></p>
+					<p><span id="userdirect">Web/Android</span></p>
+				</div>
+				<div class="l-base">
+					<p>基本信息</p>
+					<table>
+						<tr>
+							<td>性别</td>
+							<td id="usersex">男</td>
+						</tr>
+						<tr>
+							<td>出生年月</td>
+							<td id="userbornday">199X.0X.0X</td>
+						</tr>
+						<tr>
+							<td>毕业院校</td>
+							<td id="userschool">XXX大学</td>
+						</tr>
+						<tr>
+							<td>籍贯</td>
+							<td id="userorigin">四川成都</td>
+						</tr>
+						<tr>
+							<td>学历</td>
+							<td id="useredu">本科</td>
+						</tr>
+						<tr>
+							<td>联系电话</td>
+							<td id="usertel">184XXXXXXXX</td>
+						</tr>
+						<tr>
+							<td>邮箱</td>
+							<td id="useremail">XXXX@163.com</td>
+						</tr>
+					</table>
+					<div id="perskills"></div>
+				</div>
+			</div>
+			<div class="page-right">
+				<div class="evaluation" id="meskills">
+					<!--<h3>专业技能</h3>
+					<ul>
+						<li>项目基本情况：xxx小游戏是基于h5的跨平台小游戏</li>
+						<li>项目分工：负责前端后台sql全栈开发</li>
+						<li>demo地址：xxxxx.com</li>
+					</ul>-->
+				</div>
+				<div class="projectexp" id="proexp">
+					<!--<h3>项目经验</h3>
+					<table>
+						<tr>
+							<td>2016.05-2016.11</td>
+							<td>xxx小游戏开发</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<ul>
+									<li>项目基本情况：xxx小游戏是基于h5的跨平台小游戏</li>
+									<li>项目分工：负责前端后台sql全栈开发</li>
+									<li>demo地址：xxxxx.com</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>2016.05-2016.11</td>
+							<td>xxx小游戏开发</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<ul>
+									<li>项目基本情况：xxx小游戏是基于h5的跨平台小游戏</li>
+									<li>项目分工：负责前端后台sql全栈开发</li>
+									<li>demo地址：xxxxx.com</li>
+								</ul>
+							</td>
+						</tr>
+					</table>-->
+				</div>
+				<div class="projectexp" id="intexp">
+					<!--<h3>工作经历</h3>
+					<table>
+						<tr>
+							<td>2016.05-2016.11</td>
+							<td>xxx公司</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<ul>
+									<li>负责项目整体开发与运维</li>
+									<li>负责运营</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>2016.05-2016.11</td>
+							<td>xxx公司</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<ul>
+									<li>负责项目整体开发与运维</li>
+									<li>负责运营</li>
+								</ul>
+							</td>
+						</tr>
+					</table>-->
+				</div>
+				<div class="awardhonor" id="award">
+					<!--<h3>奖项荣誉</h3>
+					<table>
+						<tr>
+							<td>2016.05</td>
+							<td>xxx计算机技能大赛xxx奖</td>
+						</tr>
+						<tr>
+							<td>2016.05</td>
+							<td>xxx计算机技能大赛xxx奖</td>
+						</tr>
+					</table>-->
+				</div>
+				<div class="evaluation" id="evalut">
+					<!--<h3>自我评价</h3>
+					<ul>
+						<li>项目基本情况：xxx小游戏是基于h5的跨平台小游戏</li>
+						<li>项目分工：负责前端后台sql全栈开发</li>
+						<li>demo地址：xxxxx.com</li>
+					</ul>-->
+				</div>
+			</div>
+		</div>
+	</body>
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript">
+var numList = ["one","two","three","four","five"];
+$(document).ready(function(){
+	//初始化页面信息
+	initView();
+});
+/**
+ * 页面信息初始化
+ */
+function initView(){
+	//基本信息
+	baseView();
+	headShow();
+	//个人技能
+	$("#perskills").html(perskillsShow());
+	//专业技能
+	$("#meskills").html(meSkillsShow());
+	//项目经验
+	$("#proexp").html(proShow());
+	//工作经历
+	$("#intexp").html(intShow());
+	//奖项荣誉
+	$("#award").html(awardShow());
+	//自我评价
+	$("#evalut").html(evalShow());
+}
+/**
+ * 基本信息
+ */
+function baseView(){
+	var baseList = ["username","usersex","userbornday",
+	"usernation","userorigin","userpolite","useredu","userschool",
+	"usertel","useremail","useraddress"];
+	
+	for (var i=0;i<baseList.length;i++) {
+		var id = "#"+baseList[i];
+		$(id).text(localStorage.getItem(baseList[i]));
+	}
+	var t_dir = "";
+	if(localStorage.getItem("userdirect")){
+		var dir = localStorage.getItem("userdirect").split("#");
+		console.log(dir);
+		for (var j=0;j<dir.length;j++) {
+			if(j==(dir.length-1)){
+				t_dir += dir[j];
+			}else{
+				t_dir += dir[j]+"/";
+			}
+		}
+	}else{
+		var t_dir = "无方向";
+	}
+	$("#userdirect").text(t_dir);
+	if(localStorage.getItem("head")){
+//		$("#head").src(localStorage.getItem("head"));
+		$("#head").attr("src",localStorage.getItem("head"));
+	}
+}
+/**
+ * 个人技能
+ */
+function perskillsShow(){
+	var skills_t_list = ["skills_t_one","skills_t_two","skills_t_three",
+	"skills_t_four","skills_t_five"];
+	var skills_num = ["one","two","three","four","five"];
+	var temp = "<p>个人技能</p><table>";
+	var skills_temp="";
+	for (var i=0;i<skills_t_list.length;i++) {
+		var skills_t = localStorage.getItem(skills_t_list[i]);
+		if((skills_t!=null)&&(skills_t!="")){
+			skills_temp += "<tr><td>"+skills_t+"</td>";
+			skills_temp += "<td>"+localStorage.getItem("skills_c_"+skills_num[i]);+"</td></tr>";
+		}
+	}
+	temp += skills_temp;
+	temp += "</table>";
+	if(skills_temp==null || skills_temp==""){
+		console.log("没有技能");
+		return "";
+	}else{
+		console.log(temp);
+		return temp;
+	}
+}
+/**
+ * 专业技能
+ */
+function meSkillsShow(){
+	var skills_temp = "";
+	var temp = "<h3>专业技能</h3><ul>";
+	var meskills = localStorage.getItem("meskills");
+	if(meskills){
+		var tcc = meskills.split("\n");
+		for (var i=0;i<tcc.length;i++) {
+			skills_temp += "<li>"+tcc[i]+"</li>";
+		}
+	}
+	temp += skills_temp;
+	temp += "</ul>";
+	if(skills_temp==null || skills_temp==""){
+		console.log("没有技能");
+		return "";
+	}else{
+		console.log(temp);
+		return temp;
+	}
+//	<h3>专业技能</h3>
+//	<ul>
+//		<li>项目基本情况：xxx小游戏是基于h5的跨平台小游戏</li>
+//		<li>项目分工：负责前端后台sql全栈开发</li>
+//		<li>demo地址：xxxxx.com</li>
+//	</ul>
+}
+/**
+ * 项目经验
+ */
+function proShow(){
+	var pro_temp = "";
+	var temp = "<h3>项目经验</h3><table>";
+	for (var i=0;i<numList.length;i++) {
+		var numTemp = "project_t_"+numList[i];
+		if(localStorage.getItem(numTemp)){
+			pro_temp += "<tr><td>"+tempStorge('project_t_',numList[i])+"</td>";
+			pro_temp += "<td>"+tempStorge('project_c_',numList[i])+"</td></tr>";
+			var pap = tempStorge('project_p_',numList[i]);
+			if(pap!=""&&pap!=null){
+				pro_temp += "<tr><td colspan='2'><ul>";
+				var paper = pap.split("\n");
+				for (var j=0;j<paper.length;j++) {
+					pro_temp += "<li>"+paper[j]+"</li>";
+				}
+				pro_temp += "</ul></td></tr>"
+			}
+		}
+	}
+	temp += pro_temp;
+	temp += "</table>";
+	if(pro_temp==null || pro_temp==""){
+		console.log("没有经验");
+		return "";
+	}else{
+		console.log(temp);
+		return temp;
+	}
+//	<h3>项目经验</h3>
+//	<table>
+//		<tr>
+//			<td>2016.05-2016.11</td>
+//			<td>xxx小游戏开发</td>
+//		</tr>
+//		<tr>
+//			<td colspan="2">
+//				<ul>
+//					<li>项目基本情况：xxx小游戏是基于h5的跨平台小游戏</li>
+//					<li>项目分工：负责前端后台sql全栈开发</li>
+//					<li>demo地址：xxxxx.com</li>
+//				</ul>
+//			</td>
+//		</tr>
+//	</table>
+}
+/**
+ * 工作经历
+ */
+function intShow(){
+	var int_temp = "";
+	var temp = "<h3>工作经历</h3><table>";
+	for (var i=0;i<numList.length;i++) {
+		var numTemp = "inter_t_"+numList[i];
+		if(localStorage.getItem(numTemp)){
+			int_temp += "<tr><td>"+tempStorge('inter_t_',numList[i])+"</td>";
+			int_temp += "<td>"+tempStorge('inter_c_',numList[i])+"</td></tr>";
+			var pap = tempStorge('inter_p_',numList[i]);
+			if(pap!=""&&pap!=null){
+				int_temp += "<tr><td colspan='2'><ul>";
+				var paper = pap.split("\n");
+				for (var j=0;j<paper.length;j++) {
+					int_temp += "<li>"+paper[j]+"</li>";
+				}
+				int_temp += "</ul></td></tr>"
+			}
+		}
+	}
+	temp += int_temp;
+	temp += "</table>";
+	if(int_temp==null || int_temp==""){
+		console.log("没有经历");
+		return "";
+	}else{
+		console.log(temp);
+		return temp;
+	}
+//	<h3>工作经历</h3>
+//	<table>
+//		<tr>
+//			<td>2016.05-2016.11</td>
+//			<td>xxx公司</td>
+//		</tr>
+//		<tr>
+//			<td colspan="2">
+//				<ul>
+//					<li>负责项目整体开发与运维</li>
+//					<li>负责运营</li>
+//				</ul>
+//			</td>
+//		</tr>
+//		<tr>
+//			<td>2016.05-2016.11</td>
+//			<td>xxx公司</td>
+//		</tr>
+//		<tr>
+//			<td colspan="2">
+//				<ul>
+//					<li>负责项目整体开发与运维</li>
+//					<li>负责运营</li>
+//				</ul>
+//			</td>
+//		</tr>
+//	</table>
+}
+/**
+ * 奖项荣誉
+ */
+function awardShow(){
+	var award_temp = "";
+	var temp = "<h3>奖项荣誉</h3><table>";
+	for (var i=0;i<numList.length;i++) {
+		var numTemp = "award_t_"+numList[i];
+		if(localStorage.getItem(numTemp)){
+			award_temp += "<tr><td>"+tempStorge('award_t_',numList[i])+"</td>";
+			award_temp += "<td>"+tempStorge('award_c_',numList[i])+"</td></tr>";
+			var pap = tempStorge('award_p_',numList[i]);
+			if(pap!=""&&pap!=null){
+				award_temp += "<tr><td colspan='2'><ul>";
+				var paper = pap.split("\n");
+				for (var j=0;j<paper.length;j++) {
+					award_temp += "<li>"+paper[j]+"</li>";
+				}
+				award_temp += "</ul></td></tr>"
+			}
+		}
+	}
+	temp += award_temp;
+	temp += "</table>";
+	if(award_temp==null || award_temp==""){
+		console.log("没有奖项");
+		return "";
+	}else{
+		console.log(temp);
+		return temp;
+	}
+//	<h3>奖项荣誉</h3>
+//	<table>
+//		<tr>
+//			<td>2016.05</td>
+//			<td>xxx计算机技能大赛xxx奖</td>
+//		</tr>
+//		<tr>
+//			<td>2016.05</td>
+//			<td>xxx计算机技能大赛xxx奖</td>
+//		</tr>
+//	</table>
+}
+/**
+ * 自我评价
+ */
+function evalShow(){
+	var eval_temp = "";
+	var temp = "<h3>自我评价</h3><ul>";
+	if(localStorage.getItem("eval_p_one")){
+		var tcc = localStorage.getItem("eval_p_one").split("\n");
+		for (var i=0;i<tcc.length;i++) {
+			eval_temp += "<li>"+tcc[i]+"</li>";
+		}
+	}
+	temp += eval_temp;
+	temp += "</ul>";
+	if(eval_temp==null || eval_temp==""){
+		console.log("没有自我评价");
+		return "";
+	}else{
+		console.log(temp);
+		return temp;
+	}
+//	<h3>自我评价</h3>
+//	<ul>
+//		<li>项目基本情况：xxx小游戏是基于h5的跨平台小游戏</li>
+//		<li>项目分工：负责前端后台sql全栈开发</li>
+//		<li>demo地址：xxxxx.com</li>
+//	</ul>
+}
+/**
+ * 字符转换
+ * @param {前缀} $a
+ * @param {尾缀} $b
+ */
+function tempStorge($a,$b){
+	var t = $a+$b;
+	if(localStorage.getItem(t)){
+		return localStorage.getItem(t);
+	}
+	return "";
+}
+function headShow(){
+	if(localStorage.getItem("head")){
+		$("#head").attr("src",localStorage.getItem("head"))
+	}else{
+		$("#head").attr("src","../img/nd.jpg");
+	}
+}
+/**
+ * 改变头像
+ */
+function changeHead($obj){
+	location.href="http://www.qimuren.com/show/index.php";
+//	"http://b.hiphotos.baidu.com/baike/w%3D268/sign=88bc4e91d42a60595210e61c1035342d/d1a20cf431adcbefafbadc5eafaf2edda2cc9fd8.jpg"
+}
+function visibeAction(){
+	$(".back").hide();
+}
+</script>
+</html>

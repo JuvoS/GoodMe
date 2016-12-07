@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Good ME</title>
+		<script src="../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css">
+.g-main{
+	display: block;
+	width: 960px;
+	box-shadow: rgb(211,211,211) 0px 4px 20px 0px;
+	font-size: 16px;
+	line-height: 50px;
+	background: #fff;
+	margin: 30px auto 20px;
+	padding: 20px;
+	height:auto;min-height:500px;
+}
+.g-title{
+	height: 100px;
+	text-align: center;
+	border-bottom: 1px solid #eee;
+}
+.g-title h1{
+	font-weight: bold;
+	font-size: 50px;
+	font-family: "microsoft yahei";
+	text-shadow: 5px 5px 5px rgb(211,211,211);
+	
+}
+.g-content{
+	padding-bottom: 10px;
+	margin: 10px 0px 0px 10px;
+	text-align: center;
+	z-index: 10;
+	align-content: center;
+	width: 100%;
+	height:auto;min-height:300px;
+}
+.g-content>h3{
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 30px;
+}
+.g-footer{	
+	height: 40px;
+	text-align: center;
+	border-top: 1px solid #eee;
+	padding-top: 30px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.g-footer>p{
+	line-height: 30px;
+	font-size: 15px;
+	font-family: "microsoft yahei";	
+	margin-bottom: 5px;
+}
+.c-info{
+	width: 100%;
+}
+.c-info>h4{
+	padding-left: 50px;
+	text-align: left;
+}
+.c-info>img{
+	width: 80%;
+}
+</style>
+<link rel="stylesheet" href="../css/back.css" />
+</head>
+<body>
+	<div class="back">
+		<a onclick="checkCate();">返回</a>
+	</div>
+		<div class="g-main">
+			<div class="g-title">
+				<h1>GOOD ME</h1>
+			</div>
+			<div class="g-content">
+				<h3>使用方法</h3>
+				<div class="c-info">
+					<h4>基本信息填写</h4>
+					<img src="../img/manual/base.gif" />
+					<h4>就业方向填写</h4>
+					<img src="../img/manual/dir.gif" />
+					<h4>专业技能填写</h4>
+					<img src="../img/manual/skills.gif" />
+					<h4>经验填写</h4>
+					<img src="../img/manual/exp.gif" />
+					<h4>头像上传</h4>
+					<img src="../img/manual/headImg.gif" />
+					<h4>模板选择生成</h4>
+					<img src="../img/manual/check.gif" />
+					<h4>pdf生成</h4>
+					<img src="../img/manual/pdf.gif" />
+				</div>
+			</div>
+			<div class="g-footer">
+				<p style="color: #FF7E2D;font-size: 5px;line-height: 20px!important;">注：信息云端存储暂未提供，请注意在关机前生成信息</p>
+				<p>do by JuvoS</p>
+			</div>
+		</div>
+	</body>
+
+<script type="text/javascript">
+//localStorage.clear();
+function checkCate(){
+	window.location.href=history.go(-1);
+}
+</script>
+</html>

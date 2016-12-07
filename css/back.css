@@ -1,0 +1,25 @@
+.back{
+	position:fixed; top: 100px; right: 50px;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: #fff;
+	box-shadow: rgb(211,211,211) 0px 4px 20px 0px;
+	text-align: center;
+	line-height: 50px;
+}
+.back>a{
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	text-align: center;
+	line-height: 50px;
+	font-family: "微软雅黑";
+	color: #333333;
+	text-decoration: none;
+	cursor: pointer;
+	display: block;
+}
+.back>a:hover{
+	border: 1px solid #eee;
+}

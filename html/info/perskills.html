@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>技能</title>
+		<link rel="stylesheet" href="../../layer/css/min.css">
+		<link rel="stylesheet" href="../../layer/css/min_123.css">
+		<style>
+			.agree-protocol{
+				margin-left: 30px!important;
+				margin-top: 20px!important;
+				margin-bottom: 20px!important;
+			}
+			.agree-protocol table tbody tr td{
+				padding: 2px;
+			}
+			.agree-protocol table tbody tr:nth-child(1){
+				text-align: center!important;
+			}
+			.agree-protocol table tbody tr td:nth-child(1){
+				width: 150px;
+			}
+			.agree-protocol table tbody tr td:nth-child(2){
+				width: 600px;
+			}
+			.agree-protocol table tbody tr td span{
+				/*padding-left: 5px;*/
+				padding-right: 5px;
+	/*			padding-left: 2px!important;*/
+			}
+			.agree-protocol table tbody tr td span input{
+				width: 90%;
+			}
+			.agree-protocol table tbody tr td:nth-child(2) span input{
+				width: 95%!important;
+			}
+			.tocenter{
+				text-align: center!important;
+			}
+			.meskills{
+				margin-left: 30px!important;
+				margin-right: 30px!important;
+				margin-top: 20px!important;
+				margin-bottom: 20px!important;
+			}
+			.meskills table{
+				width: 100%;
+			}
+			.meskills table tbody tr td{
+				padding: 2px;
+			}
+			.meskills table tbody tr:nth-child(1){
+				height: 30px!important;
+				
+			}
+			.expcontent{
+				/*width: 90%!important;*/
+				/*border: 1px dashed #ccc;*/
+				width: 100%;
+				padding: 5px!important;
+				vertical-align:top;
+			}
+			.expcontent>textarea{
+				width: 100%;
+				height: 150px;
+				text-align: left;
+				padding-left: 10px;
+				padding-top: 5px;
+				margin-left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="confirm-info-list mgt clearfix" style="position: relative; margin:0 auto;">
+	      <dl class="confirm-info-list-dl confirm-info-list-project">
+	      	<div class="agree-protocol">
+	      	<table>
+	      		<tbody>
+	      			<tr>
+	      				<td>技能名称</td>
+	      				<td>技能内容</td>
+	      			</tr>
+	      			<tr>
+	      				<td><span class="td-name">例：前端</span></td>
+	      				<td><span class="plain-text">Html、Css、JS、jQuery、Angular.js、bootstrap、amazeui……</span></td>
+	      			</tr>
+	      			<tr>
+	      				<td>
+	      					<span class="plain-text">
+	      						<input  type="text" placeholder="请输入名称" id="skills_t_one" onchange="changeInfo(this);">
+	      					</span>
+	      				</td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入内容" id="skills_c_one" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td>
+	      					<span class="plain-text">
+	      						<input  type="text" placeholder="请输入名称" id="skills_t_two" onchange="changeInfo(this);">
+	      					</span>
+	      				</td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入内容" id="skills_c_two" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td>
+	      					<span class="plain-text">
+	      						<input  type="text" placeholder="请输入名称" id="skills_t_three" onchange="changeInfo(this);">
+	      					</span>
+	      				</td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入内容" id="skills_c_three" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td>
+	      					<span class="plain-text">
+	      						<input  type="text" placeholder="请输入名称" id="skills_t_four" onchange="changeInfo(this);">
+	      					</span>
+	      				</td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入内容" id="skills_c_four" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      			<tr>
+	      				<td>
+	      					<span class="plain-text">
+	      						<input  type="text" placeholder="请输入名称" id="skills_t_five" onchange="changeInfo(this);">
+	      					</span>
+	      				</td>
+	      				<td>
+	      					<span class="plain-text">
+		                    	<input  type="text" placeholder="请输入内容" id="skills_c_five" onchange="changeInfo(this);">
+		                    </span>
+	      				</td>
+	      			</tr>
+	      		</tbody>
+	      	</table>
+	      	</div>
+	      	<div class="meskills">
+	      		<table>
+		      		<tbody>
+		      			<tr style="text-align: center;">
+		      				<td colspan="2">专业技能</td>
+		      			</tr>
+		      			<tr>
+		      				<td colspan="2"><span class="plain-text">基本专业技能情况</span></td>
+		      			</tr>
+		      			<tr>
+		      				<td colspan="2" class="expcontent">
+	      						<textarea  type="text" placeholder="请输入内容，换行请直接输入回车键" id="meskills" onchange="changeInfo(this);"></textarea>
+		      				</td>
+		      			</tr>
+		      		</tbody>
+		      	</table>
+	      	</div>
+	      </dl>
+	      <dl class="confirm-info-list-dl confirm-info-list-project">
+	      	<div class="agree-protocol">
+	      		<div id="baseInfo"></div>
+	      	</div>
+	      </dl>
+	    </div>
+	</body>
+<script src="../../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+var idlist=["skills_t_one","skills_c_one","skills_t_two","skills_c_two","skills_t_three",
+			"skills_c_three","skills_t_four","skills_c_four","skills_t_five","skills_c_five",
+"meskills"];
+window.onload = function (){
+	for (var i=0;i<idlist.length;i++) {
+		var temp=getInfo(idlist[i]);
+		var id_t="#"+idlist[i];
+		if(temp==null){
+			temp="";
+			localStorage.setItem(idlist[i],temp);
+		}
+		$(id_t).val(temp);
+	}
+}
+$(document).ready(function(){
+	refreshInfo();
+});
+function refreshInfo(){
+	var temp = "<table><tbody><tr><td>技能名称</td><td>技能内容</td></tr><tr>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("skills_t_one")+"</span></td>";
+	temp += "<td><span class='plain-text'>"+localStorage.getItem("skills_c_one")+"</span></td>";
+	temp += "</tr><tr>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("skills_t_two")+"</span></td>";
+	temp += "<td><span class='plain-text'>"+localStorage.getItem("skills_c_two")+"</span></td>";
+	temp += "</tr><tr>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("skills_t_three")+"</span></td>";
+	temp += "<td><span class='plain-text'>"+localStorage.getItem("skills_c_three")+"</span></td>";
+	temp += "</tr><tr>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("skills_t_four")+"</span></td>";
+	temp += "<td><span class='plain-text'>"+localStorage.getItem("skills_c_four")+"</span></td>";
+	temp += "</tr><tr>";
+	temp += "<td class='tocenter'><span class='plain-text'>"+localStorage.getItem("skills_t_five")+"</span></td>";
+	temp += "<td><span class='plain-text'>"+localStorage.getItem("skills_c_five")+"</span></td>";
+	temp += "</tr></tbody></table>";
+	temp += pToTemp("meskills");
+	$("#baseInfo").html(temp);
+	
+}
+function changeInfo(obj){
+	localStorage.setItem(obj.id,obj.value);
+	refreshInfo();
+}
+function getInfo(id){
+	return localStorage.getItem(id);
+}
+function pToTemp(id){
+	var temp="";
+	if(localStorage.getItem(id)){
+		var tcc = localStorage.getItem(id).split("\n");
+		temp += "<tr><td colspan='2'><ul style='list-style: disc;margin-left:30px;'>";
+		for (var i=0;i<tcc.length;i++) {
+			temp += "<li>"+tcc[i]+"</li>"
+		}
+		temp += "</ul></td></tr>";
+	}
+	return temp;
+}
+</script>
+</html>

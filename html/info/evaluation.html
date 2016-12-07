@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自我评价</title>
+		<link rel="stylesheet" href="../../layer/css/min.css">
+		<link rel="stylesheet" href="../../layer/css/min_123.css">
+		<style>
+			.agree-protocol{
+				margin-left: 30px!important;
+				margin-right: 30px!important;
+				margin-top: 20px!important;
+				margin-bottom: 20px!important;
+			}
+			.agree-protocol table{
+				width: 100%;
+			}
+			.agree-protocol table tbody tr td{
+				padding: 2px;
+			}
+			.agree-protocol table tbody tr:nth-child(1){
+				height: 30px!important;
+				
+			}
+			.tocenter{
+				text-align: center!important;
+			}
+			.expcontent{
+				/*width: 90%!important;*/
+				/*border: 1px dashed #ccc;*/
+				width: 100%;
+				padding: 5px!important;
+				vertical-align:top;
+			}
+			.expcontent>textarea{
+				width: 100%;
+				height: 150px;
+				text-align: left;
+				padding-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="confirm-info-list mgt clearfix" style="position: relative; margin:0 auto;">
+	      <dl class="confirm-info-list-dl confirm-info-list-eval">
+	      	<div class="agree-protocol">
+	      	<table>
+	      		<tbody>
+	      			<tr style="text-align: center;">
+	      				<td colspan="2">自我评价</td>
+	      			</tr>
+	      			<tr>
+	      				<td colspan="2"><span class="plain-text">对我自己来说，我觉得需要一份好的简历!</span></td>
+	      			</tr>
+	      			<tr>
+	      				<td colspan="2" class="expcontent">
+      						<textarea  type="text" placeholder="请输入内容，换行请直接输入回车键" id="eval_p_one" onchange="changeInfo(this);"></textarea>
+	      				</td>
+	      			</tr>
+	      		</tbody>
+	      	</table>
+	      	</div>
+	      </dl>
+	      <dl class="confirm-info-list-dl confirm-info-list-eval">
+	      	<div class="agree-protocol">
+	      		<div id="baseInfo"></div>
+	      	</div>
+	      </dl>
+	    </div>
+	</body>
+<script src="../../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+var idlist=["eval_p_one"];
+window.onload = function (){
+	for (var i=0;i<idlist.length;i++) {
+		var temp=getInfo(idlist[i]);
+		var id_t="#"+idlist[i];
+		if(temp==null){
+			temp="";
+			localStorage.setItem(idlist[i],temp);
+		}
+		$(id_t).val(temp);
+	}
+}
+$(document).ready(function(){
+	refreshInfo();
+});
+function refreshInfo(){
+	var temp = "<table><tbody>";
+	temp += pToTemp("eval_p_one");
+	temp += "</tbody></table>";
+	$("#baseInfo").html(temp);
+}
+function pToTemp(id){
+	var temp="";
+	if(localStorage.getItem(id)){
+		var tcc = localStorage.getItem(id).split("\n");
+		temp += "<tr><td colspan='2'><ul style='list-style: disc;margin-left:30px;'>";
+		for (var i=0;i<tcc.length;i++) {
+			temp += "<li>"+tcc[i]+"</li>"
+		}
+		temp += "</ul></td></tr>";
+	}
+	return temp;
+}
+function changeInfo(obj){
+	localStorage.setItem(obj.id,obj.value);
+	refreshInfo();
+}
+function getInfo(id){
+	return localStorage.getItem(id);
+}
+
+</script>
+</html>

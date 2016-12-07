@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/gme.css"/>
+		<script src="../js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css">
+html,body{
+	border: 0px;
+}
+.page-main{
+	display: block;
+	width: 960px;
+	/*box-shadow: rgb(211,211,211) 0px 4px 20px 0px;*/
+	font-size: 16px;
+	line-height: 50px;
+	background: #fff;
+	margin: 30px auto 20px;
+	padding: 20px 20px 20px 40px;
+	height:auto;min-height:500px;
+	border: 0;
+	font-family: "微软雅黑";
+}
+.page-up{
+	display: block;
+	width: 96%;
+	float: left;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #484848;
+	/*background-color: #EEEEEE;*/
+	height:200px;
+	line-height: 200px;
+}
+.page-down{
+	display: block;
+	width: 96%;
+	padding-left: 50px;
+	padding-right: 10px;
+	/*border: 1px dotted #EF4737;*/
+	height:auto;min-height:500px;
+}
+.l-head{
+	width: 30%;
+	text-align:center;
+	margin: 0;
+	float: right;
+	height:200px;
+	line-height: 200px;
+	margin-right: 50px;
+}
+.l-head-img{
+	margin-top: 10px;
+	margin-left: auto;
+	/*margin-right: 50px;*/
+	height: 100px;
+}
+.l-head-img>img{
+	width: 100px;
+	height: 100px;
+/*	padding-top: 30px;*/
+	background-color:#ccc; 
+	-moz-border-radius: 60px; 
+	-webkit-border-radius: 60px; 
+	border: 3px solid #AAAAAA;
+}
+.l-head-name{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/*margin-right: 50px;*/
+	font-size: 20px;
+}
+.l-head-name>p{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+#username{
+	font-size: 25px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+}
+.l-base{
+	width: 58%;
+	margin-top: 30px;
+	margin-left: 50px;
+	margin-right: auto;
+	float: left;
+}
+.l-base p{
+	font-size: 20px;
+	font-weight: bold;
+	height: 20px;
+	line-height: 20px;
+	margin: 1px 0 1px 5px;
+}
+.base-left{
+	width: 50%;
+	float: left;
+}
+.base-right{
+	width: 50%;
+	float: right;
+}
+.base-left table tbody tr{
+	/*width: 100%;*/
+	height: 20px;
+	line-height: 20px;
+	font-size: 18px;
+}
+.base-right table tbody tr{
+	/*width: 100%;*/
+	height: 20px;
+	line-height: 20px;
+	font-size: 18px;
+}
+.base-left table tbody tr td:nth-child(1){
+	width: 110px!important;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+}
+
+.base-right table tbody tr td:nth-child(1){
+	width: 110px!important;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	padding-left: 5px;
+}
+.down-down{
+	width: 100%;
+	float: left;
+	/*background-color: #EEEEEE;*/
+	margin-top: 20px;
+	margin-left: 50px;
+}
+.down-up{
+	width: 100%;
+	float: right;
+	/*background-color: #EEEEEE;*/
+	margin-top: 20px;
+	/*border-left: 1px dotted #555;*/
+}
+.projectexp{
+	width: 100%;
+	margin-left: 20px;
+}
+h3{
+	font-size: 25px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	color: #222;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	/*border-bottom: 1px solid #555;*/
+	margin-right: 30px;
+}
+#perskills table{
+	width: 100%;
+}
+#perskills table tbody{
+	width: 100%;
+}
+#perskills table tbody tr{
+	font-size: 15px;
+	font-family: "微软雅黑";
+	/*height: 30px;*/
+	line-height: 25px;
+}
+#perskills table tbody tr td:nth-child(1){
+	width: 20%;
+}
+#perskills table tbody tr td:nth-child(2){
+	width: 80%;
+}
+.evaluation>ul{
+	line-height: 30px;
+	padding-right: 10px;
+	font-size: 15px;
+}
+/*.awardhonor>table{
+	line-height: 30px;
+	padding-left: 10px;
+	font-size: 15px;
+}*/
+.down-up table{
+	margin-left: 10px;
+}
+/*.down-up table tr:nth-child(odd){
+	font-size: 20px;
+	line-height: 30px;
+	padding-left: 10px;
+}*/
+
+.down-up table tr{
+	font-size: 18px;
+	line-height: 30px;
+	padding-left: 10px;
+}
+.tab-title{
+	font-size: 20px!important;
+	line-height: 30px;
+	padding-left: 10px;
+}
+.down-up table tr td:nth-child(1){
+	width: 40%;
+}
+.down-up table tbody tr td>ul{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.awardhonor{
+	width: 100%;
+	margin-left: 20px;
+}
+.awardhonor table tr{
+	font-size: 18px!important;
+	line-height: 30px;
+	padding-left: 30px;
+}
+
+</style>
+	<link rel="stylesheet" href="../css/back.css" />
+	</head>
+	<body>
+		<div class="back">
+			<a onclick="history.go(-1);">返回</a>
+			<a onclick="visibeAction();">隐藏</a>
+		</div>
+		<div class="page-main" ng-app="myApp" ng-controller="myCtrl">
+			<div class="page-up">
+				<div class="l-head">
+					<div class="l-head-img">
+						<img id="headImg" src="{{ headImg }}" onclick="changeHead(this);"/>
+					</div>
+					<div class="l-head-name">
+						<p><span id="username">{{username}}</span></p>
+						<p><span id="userdirect">{{userdirect}}</span></p>
+					</div>
+				</div>
+				<div class="l-base">
+					<p>基本信息</p>
+					<div class="base-left">
+						<table>
+							<tr>
+								<td>性别</td>
+								<td id="usersex">{{usersex}}</td>
+							</tr>
+							<tr>
+								<td>出生年月</td>
+								<td id="userbornday">{{userbornday}}</td>
+							</tr>
+							<tr>
+								<td>毕业院校</td>
+								<td id="userschool">{{userschool}}</td>
+							</tr>
+							<tr>
+								<td>学历</td>
+								<td id="useredu">{{useredu}}</td>
+							</tr>
+						</table>
+					</div>
+					<div class="base-right">
+						<table>
+							<tr>
+								<td>籍贯</td>
+								<td id="userorigin">{{userorigin}}</td>
+							</tr>
+							<tr>
+								<td>联系电话</td>
+								<td id="usertel">{{usertel}}</td>
+							</tr>
+							<tr>
+								<td>邮箱</td>
+								<td id="useremail">{{useremail}}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="page-down">
+				<div class="down-up">
+					<div class="projectexp" id="proexp">
+						<h3>项目经验</h3>
+						<table ng-repeat="x in proexp">
+							<tr  class="tab-title">
+								<td>{{x.pro_t}}</td>
+								<td>{{x.pro_c}}</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<ul>
+										<li ng-repeat="y in x.pro_p">{{y.procc}}</li>
+										<!--<li>项目分工：负责前端后台sql全栈开发</li>
+										<li>demo地址：xxxxx.com</li>-->
+									</ul>
+								</td>
+							</tr>
+							<!--<tr class="tab-title">
+								<td>2016.05-2016.11</td>
+								<td>xxx小游戏开发</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<ul>
+										<li>项目基本情况：xxx小游戏是基于h5的跨平台小游戏项目基本情况：xxx小游戏是基于h5的跨平台小游戏</li>
+										<li>项目分工：负责前端后台sql全栈开发</li>
+										<li>demo地址：xxxxx.com</li>
+									</ul>
+								</td>
+							</tr>-->
+						</table>
+					</div>
+					<div class="projectexp" id="intexp">
+						<h3>工作经历</h3>
+						<table ng-repeat="x in interexp">
+							<tr class="tab-title">
+								<td>{{x.inter_t}}</td>
+								<td>{{x.inter_c}}</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<ul>
+										<li ng-repeat="y in x.inter_p">{{y.p_cc}}</li>
+										<!--<li>负责运营</li>-->
+									</ul>
+								</td>
+							</tr>
+							<!--<tr class="tab-title">
+								<td>2016.05-2016.11</td>
+								<td>xxx公司</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<ul>
+										<li>负责项目整体开发与运维</li>
+										<li>负责运营</li>
+									</ul>
+								</td>
+							</tr>-->
+						</table>
+					</div>
+					<div class="awardhonor" id="award">
+						<h3>奖项荣誉</h3>
+						<table>
+							<tr ng-repeat="x in awards">
+								<td>{{x.award_t}}</td>
+								<td>{{x.award_c}}</td>
+							</tr>
+							<!--<tr>
+								<td>2016.05</td>
+								<td>xxx计算机技能大赛xxx奖</td>
+							</tr>-->
+						</table>
+					</div>
+				</div>
+				<div class="down-down">
+					<div id="perskills">
+						<h3>个人技能</h3>
+						<table>
+							<tbody>
+								<tr ng-repeat="x in perskills">
+									<td>{{x.skills_t}}</td>
+									<td>{{x.skills_c}}</td>
+								</tr>
+								<!--<tr>
+									<td>Android</td>
+									<td>Html</td>
+								</tr>-->
+							</tbody>
+						</table>
+					</div>
+					<div class="evaluation" id="meskills">
+						<h3>专业技能</h3>
+						<ul>
+							<li ng-repeat="x in meskills">{{x.meskills_p}}</li>
+							<!--<li>项目分工：负责前端后台sql全栈开发</li>
+							<li>demo地址：xxxxx.com</li>-->
+						</ul>
+					</div>
+					<div class="evaluation" id="evalut">
+						<h3>自我评价</h3>
+						<ul>
+							<li ng-repeat="x in evalut">{{x.eval_p}}</li>
+							<!--<li>项目分工：负责前端后台sql全栈开发</li>
+							<li>demo地址：xxxxx.com</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js" ></script>
+<script src="../js/gme.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+	$scope.headImg = headShow();
+    $scope.username = localStorage.getItem("username");
+    $scope.usersex = localStorage.getItem("usersex");
+    $scope.userbornday = localStorage.getItem("userbornday");
+    $scope.usernation = localStorage.getItem("usernation");
+    $scope.userorigin = localStorage.getItem("userorigin");
+    $scope.userpolite = localStorage.getItem("userpolite");
+    $scope.useredu = localStorage.getItem("useredu");
+    $scope.userschool = localStorage.getItem("userschool");
+    $scope.usertel = localStorage.getItem("usertel");
+    $scope.useremail = localStorage.getItem("useremail");
+    $scope.useraddress = localStorage.getItem("useraddress");
+    $scope.userdirect = dirShow();
+    
+	$scope.perskills = perskillsShow();
+	$scope.meskills = meSkillsShow();
+	$scope.evalut = evalShow(); 
+	$scope.proexp = proShow();
+	$scope.interexp = intShow();
+	$scope.awards = awardShow();
+});
+function headShow(){
+	console.log(localStorage.getItem("head"));
+	if(localStorage.getItem("head")){
+		return localStorage.getItem("head");
+	}else{
+		return "../img/nd.jpg";
+	}
+}
+var numList = ["one","two","three","four","five"];
+/**
+ * 选择方向数据
+ */
+function dirShow(){
+	var t_dir = "";
+	if(localStorage.getItem("userdirect")){
+		var dir = localStorage.getItem("userdirect").split("#");
+		console.log(dir);
+		for (var j=0;j<dir.length;j++) {
+			if(j==(dir.length-1)){
+				t_dir += dir[j];
+			}else{
+				t_dir += dir[j]+"/";
+			}
+		}
+	}else{
+		var t_dir = "无方向";
+	}
+	return t_dir;
+}
+
+/**
+ * 个人技能数据
+ */
+function perskillsShow(){
+	var skills_t_list = ["skills_t_one","skills_t_two","skills_t_three",
+	"skills_t_four","skills_t_five"];
+	var skills_temp=[];
+	for (var i=0;i<skills_t_list.length;i++) {
+		var skills_t = localStorage.getItem(skills_t_list[i]);
+		if((skills_t!=null)&&(skills_t!="")){
+			var t = {"skills_t":skills_t,
+			"skills_c":localStorage.getItem("skills_c_"+numList[i])}
+			skills_temp.push(t);
+		}
+	}
+	if(skills_temp==null){
+		console.log("没有技能");
+		return "";
+	}else{
+		console.log(skills_temp);
+		return skills_temp;
+	}
+}
+/**
+ * 专业技能
+ */
+function meSkillsShow(){
+	var skills_temp = [];
+	var meskills = localStorage.getItem("meskills");
+	if(meskills){
+		var tcc = meskills.split("\n");
+		for (var i=0;i<tcc.length;i++) {
+			var t = {"meskills_p":tcc[i]}
+			skills_temp.push(t);
+		}
+	}
+	if(skills_temp==null){
+		console.log("没有技能");
+		return "";
+	}else{
+		console.log(skills_temp);
+		return skills_temp;
+	}
+}
+/**
+ * 项目经验
+ */
+function proShow(){
+	var pro_temp = [];
+	for (var i=0;i<numList.length;i++) {
+		var numTemp = "project_t_"+numList[i];
+		if(localStorage.getItem(numTemp)){
+			var t = {"pro_t":tempStorge('project_t_',numList[i]),
+			"pro_c":tempStorge('project_c_',numList[i]),
+			"pro_p":proGet(i)};
+			pro_temp.push(t);
+		}
+	}
+	if(pro_temp==null){
+		console.log("没有经验");
+		return "";
+	}else{
+		console.log(pro_temp);
+		return pro_temp;
+	}
+}
+function proGet(i){
+	var pget = [];
+	var pap = tempStorge('project_p_',numList[i]);
+	if(pap!=""&&pap!=null){
+		var paper = pap.split("\n");
+		for (var j=0;j<paper.length;j++) {
+			pget.push({"procc":paper[j]});
+		}
+	}
+//	console.log("----------------------");
+//	console.log(pget);
+	return pget;
+}
+/**
+ * 工作经历
+ */
+function intShow(){
+	var int_temp = [];
+	for (var i=0;i<numList.length;i++) {
+		var numTemp = "inter_t_"+numList[i];
+		if(localStorage.getItem(numTemp)){
+			var t = {"inter_t":tempStorge('inter_t_',numList[i]),
+			"inter_c":tempStorge('inter_c_',numList[i]),
+			"inter_p":intGet(i)};
+			int_temp.push(t);
+		}
+	}
+	if(int_temp==null){
+		console.log("没有经历");
+		return "";
+	}else{
+		console.log(int_temp);
+		return int_temp;
+	}
+}
+function intGet(i){
+	var iGet = [];
+	var pap = tempStorge('inter_p_',numList[i]);
+	if(pap!=""&&pap!=null){
+		var paper = pap.split("\n");
+		for (var j=0;j<paper.length;j++) {
+			iGet.push({"p_cc":paper[j]});
+		}
+	}
+	return iGet;
+}
+/**
+ * 奖项荣誉
+ */
+function awardShow(){
+	var temp =[];
+	for (var i=0;i<numList.length;i++) {
+		var numTemp = "award_t_"+numList[i];
+		if(localStorage.getItem(numTemp)){
+			var t={"award_t":tempStorge('award_t_',numList[i]),
+			"award_c":tempStorge('award_c_',numList[i])};
+			temp.push(t);
+		}
+	}
+	if(temp==null){
+		console.log("没有奖项");
+		return "";
+	}else{
+		console.log(temp);
+		return temp;
+	}
+}
+/**
+ * 自我评价
+ */
+function evalShow(){
+	var eval_temp = [];
+	if(localStorage.getItem("eval_p_one")){
+		var tcc = localStorage.getItem("eval_p_one").split("\n");
+		for (var i=0;i<tcc.length;i++) {
+			var t = {"eval_p":tcc[i]}
+			eval_temp.push(t);
+		}
+	}
+	if(eval_temp==null){
+		console.log("没有自我评价");
+		return "";
+	}else{
+		console.log(eval_temp);
+		return eval_temp;
+	}
+}
+/**
+ * 字符转换
+ * @param {前缀} $a
+ * @param {尾缀} $b
+ */
+function tempStorge($a,$b){
+	var t = $a+$b;
+	if(localStorage.getItem(t)){
+		return localStorage.getItem(t);
+	}
+	return "";
+}
+
+</script>
+</html>
